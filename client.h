@@ -18,6 +18,8 @@ public:
 private:
     Ui::client *ui;
 
+private slots:
+    void on_sendButton_clicked();
     // The coroutine that will handle the network operation without blocking the UI
     QCoro::Task<void> sendNetworkMessage(QString host, quint16 port, QString message);
 };
